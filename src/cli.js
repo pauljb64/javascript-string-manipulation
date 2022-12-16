@@ -14,7 +14,7 @@ if (process.argv.includes("-h") || process.argv.includes("--help")) {
 }
 
 // Gather input from stdin.
-const buffer = "";
+let buffer = "";
 
 process.stdin.on("data", data => {
   buffer += data;
@@ -22,7 +22,7 @@ process.stdin.on("data", data => {
 
 // When stdin closes, operate on the gathered input.
 process.stdin.on("end", () => {
-  const results = "";
+  let results = "";
 
   switch (process.argv.slice(-1)[0]) {
     case "CR":
